@@ -4,6 +4,10 @@
   "version": "1.0.0",
   "description": "npm init template for bootstrapping an empty Colyseus project",
   "main": "lib/index.js",
+  "engines" : { 
+    "npm" : ">=6.14.12",
+    "node" : ">=14.16.1"
+  },
   "scripts": {
     "start": "npm run build & node lib/index.js ",
     "loadtest": "colyseus-loadtest loadtest/example.ts --room my_room --numClients 2",
