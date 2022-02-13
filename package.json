@@ -4,12 +4,8 @@
   "version": "1.0.0",
   "description": "npm init template for bootstrapping an empty Colyseus project",
   "main": "lib/index.js",
-  "engines" : { 
-    "npm" : "=6.14.12",
-    "node" : "=14.16.1"
-  },
   "scripts": {
-    "start": "npm run build & node lib/index.js ",
+    "start": "npm run build && node lib/index.js",
     "loadtest": "colyseus-loadtest loadtest/example.ts --room my_room --numClients 2",
     "build": "npm run clean && tsc && node node_modules/copyfiles/copyfiles package.json ./lib && node node_modules/copyfiles/copyfiles arena.env ./lib",
     "clean": "node node_modules/rimraf/bin lib",
@@ -41,7 +37,6 @@
     "cors": "^2.8.5",
     "express": "^4.16.4",
     "i": "^0.3.7",
-    "math3d": "^0.2.2",
     "npm": "^8.5.0",
     "winston": "^3.5.1"
   }
